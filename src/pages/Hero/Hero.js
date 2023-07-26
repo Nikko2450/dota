@@ -52,7 +52,11 @@ export const Hero = () => {
               <div className="hero__attack-wrapper">
                 <img
                   className="hero__attack-img"
-                  src={`${url}/static/images/melee.svg`}
+                  src={
+                    data.attack_type === "Melee"
+                      ? `${url}/static/images/melee.svg`
+                      : "/ranged.svg"
+                  }
                   alt="melee"
                 />
                 <p className="hero__attack-type">{data.attack_type}</p>
