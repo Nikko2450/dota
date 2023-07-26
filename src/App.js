@@ -1,5 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home } from "./pages/Home/Home";
+import { Hero } from "./pages/Hero/Hero";
 import "./App.sass";
 
 function App() {
@@ -7,6 +8,10 @@ function App() {
     {
       path: "/",
       element: <Home />,
+    },
+    {
+      path: "/hero/:id",
+      element: <Hero />,
     },
   ]);
   return (

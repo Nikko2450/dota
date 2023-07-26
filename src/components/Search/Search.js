@@ -19,6 +19,7 @@ export const Search = ({ placeholder, onChange }) => {
 
   return (
     <div className="search">
+      <img className="search__img" src="search.svg" alt="search" />
       <input
         className="search__input"
         type="text"
