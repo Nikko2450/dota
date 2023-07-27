@@ -1,15 +1,26 @@
 .search
+  margin: 50px auto 0
   display: flex
+  justify-content: space-around
   align-items: center
-  padding: 8px 9px
-  background-color: $c-shark
-  width: max-content
-  width: 250px
-  height: 50px
-  border: 2px solid $c-white
+  width: 90%
+  background: rgb(0,0,0)
+  background: linear-gradient(130deg, rgba(0,0,0,1) 36%, rgba(107,107,107,1) 52%)
+  padding: 10px
+  border-radius: 10px
+
+  &__wrapper
+    display: flex
+    align-items: center
+    padding: 8px 9px
+    background-color: $c-shark
+    width: max-content
+    width: 300px
+    height: 50px
+    border-radius: 5px
 
   &__img
-    margin: 0 10px 0 10px
+    margin: 0 10px
 
   &__input
     flex-grow: 1
@@ -20,6 +31,10 @@
     font-weight: 500
     line-height: normal
     height: 30px
+    padding: 4px
+
+    &:focus
+      background-color: $c-emperor
 
     &::placeholder
       color: $c-white
@@ -27,3 +42,12 @@
       font-size: 15px
       font-weight: 500
       line-height: normal
+
+  &__desc
+    color: $c-white
+    font-family: Montserrat
+    font-size: 15px
+    font-weight: 500
+    line-height: normal
+    font-size: 18px
+    text-transform: uppercase

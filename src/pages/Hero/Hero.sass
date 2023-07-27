@@ -1,7 +1,7 @@
 .hero
   padding: 30px 0 30px 0
-  background: rgb(37,40,42)
-  background: linear-gradient(130deg, rgba(37,40,42,1) 37%, rgba(0,0,0,1) 37%, rgba(78,81,83,0.9752275910364145) 79%, rgba(76,79,81,1) 94%, rgba(158,158,158,1) 94%)
+  background: rgb(0,0,0)
+  background: linear-gradient(130deg, rgba(0,0,0,1) 27%, rgba(56,56,56,1) 28%, rgba(18,18,18,1) 75%, rgba(94,89,89,1) 76%)
   height: 100%
 
   &__wrapper
@@ -37,7 +37,7 @@
     text-transform: uppercase
     letter-spacing: 2px
 
-  &__short_description
+  &__short-description
     font-size: 18px
     color: $c-blizzard-blue
     font-weight: 500
@@ -73,7 +73,7 @@
     color: $c-alto
     text-align: center
 
-  &__attack
+  &__attack-title
     font-size: 17px
     letter-spacing: 2px
     font-family: Montserrat
@@ -104,8 +104,10 @@
 
   &__complexity-wrapper
     display: flex
+    justify-content: center
     gap: 25px
     margin-top: 10px
+    width: 23%
 
   &__complexity-title
     font-size: 17px
@@ -123,10 +125,127 @@
     border: 1px solid $c-white
     transform: rotateZ(45deg)
 
+  &__all-attributes
+    padding: 20px 0
+
+  &__details-attributes
+    width: 30%
+
+  &__wrapper-attributes
+    display: flex
+    justify-content: space-around
+    align-items: center
+    margin-bottom: 15px
+
+  &__img
+    width: 150px
+    height: 84px
+
+  &__portrait
+    display: flex
+    flex-direction: column
+
+  &__health
+    position: relative
+    width: 150px
+    height: 22px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: linear-gradient(to right, $c-green-pea, $c-green-yellow)
+
+  &__health-amount
+    position: absolute
+    text-align: center
+    width: 100%
+    color: $c-white
+    text-shadow: 1px 1px 2px $c-black
+    font-family: Montserrat
+    font-weight: 700
+    line-height: normal
+
+  &__health-regeneration
+    font-family: Montserrat
+    font-size: 11px
+    text-align: right
+    width: 100%
+    padding-right: 15px
+    color: $c-green-pea
+
+  &__mana
+    position: relative
+    width: 150px
+    height: 22px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: linear-gradient(to right, $c-denim, $c-aquamarine)
+  
+  &__mana-amount
+    position: absolute
+    text-align: center
+    width: 100%
+    color: $c-white
+    text-shadow: 1px 1px 2px $c-black
+    font-family: Montserrat
+    font-weight: 700
+    line-height: normal
+  
+  &__mana-regeneration
+    font-family: Montserrat
+    font-size: 11px
+    text-align: right
+    width: 100%
+    padding-right: 15px
+    color: $c-green-pea
+
+  &__attribut
+    display: flex
+    align-items: center 
+
+  &__icon
+    width: 30px
+    height: 30px
+
+  &__attribut
+
+    &:not(:last-of-type)
+      margin-bottom: 8px
+
+  &__attribut-amount
+    color: $c-white
+    font-family: Montserrat
+    line-height: normal
+    font-weight: 700
+    font-size: 20px
+    margin-left: 12px
+    letter-spacing: 1px
+
+  &__attribut-per-level
+    color: $c-dusty-gray
+    font-family: Montserrat
+    line-height: normal
+    font-weight: 500
+    font-size: 15px
+    margin-left: 8px
+
+  &__attribut-subtitle
+    color: $c-dusty-gray
+    font-family: Montserrat
+    line-height: normal
+    font-weight: 500
+    font-size: 18px
+    text-transform: uppercase
+    text-align: center
+    letter-spacing: 5px
+
+  &__details-roles
+    width: 30%
+
 .paragraph
   color: $c-white
   font-family: Montserrat
   line-height: normal
 
-.white-romb
+.complexity
   background-color: $c-white

@@ -19,15 +19,18 @@ export const Search = ({ placeholder, onChange }) => {
 
   return (
     <div className="search">
-      <img className="search__img" src="search.svg" alt="search" />
-      <input
-        className="search__input"
-        type="text"
-        placeholder={placeholder}
-        onChange={handleChange}
-        onBlur={handleBlur}
-        onKeyDown={handleKeyPress}
-      />
+      <p className="search__desc">filter heroes:</p>
+      <div className="search__wrapper">
+        <img className="search__img" src="icon/search.svg" alt="search" />
+        <input
+          className="search__input"
+          type="text"
+          placeholder={placeholder}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          onKeyDown={handleKeyPress}
+        />
+      </div>
     </div>
   );
 };
