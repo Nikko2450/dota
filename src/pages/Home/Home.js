@@ -3,7 +3,7 @@ import { Container } from "../../components/Container/Container";
 import { Search } from "../../components/Search/Search";
 import { Card } from "../../components/Card/Card";
 
-const url = "http://192.168.0.100:8080";
+const url = "http://192.168.0.100:8080/v1";
 
 export const Home = () => {
   const [data, setData] = useState(null);
@@ -13,7 +13,7 @@ export const Home = () => {
   });
 
   useEffect(() => {
-    fetch(`${url}/v1/all/hero`, {
+    fetch(`${url}/hero/all`, {
       method: "GET",
     })
       .then((response) => {

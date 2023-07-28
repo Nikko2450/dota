@@ -126,7 +126,17 @@
     transform: rotateZ(45deg)
 
   &__all-attributes
+    background: linear-gradient(80deg, $c-shark 0%, $c-woodsmoke 100%)
+    margin-top: 30px
+    border-top: 2px solid $c-mine-shaft
+    border-bottom: 2px solid $c-outer-space
+
+  &__all-attributes-wrapper
     padding: 20px 0
+    display: flex
+    align-items: center
+    max-width: 1200px
+    margin: 0 auto
 
   &__details-attributes
     width: 30%
@@ -241,6 +251,81 @@
 
   &__details-roles
     width: 30%
+    padding: 0 20px
+
+  &__wrapper-roles
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 5px
+    margin-bottom: 15px
+
+  &__role-name
+    color: $c-white
+    font-family: Montserrat
+    line-height: normal
+    font-weight: 500
+    font-size: 15px
+    letter-spacing: 1px
+
+  &__role-scroll
+    width: 95%
+    height: 6px
+
+  &__role-subtitle
+    color: $c-dusty-gray
+    font-family: Montserrat
+    line-height: normal
+    font-weight: 500
+    font-size: 18px
+    text-transform: uppercase
+    text-align: center
+    letter-spacing: 5px
+
+  &__details-stats
+    width: 40%    
+
+  &__wrapper-stats
+    display: flex
+    justify-content: space-around
+  
+  &__stat-element
+    display: flex
+    align-items: center
+
+    &:not(:last-of-type)
+      margin-bottom: 7px
+      
+  &__stat-title
+    color: $c-dusty-gray
+    font-family: Montserrat
+    line-height: normal
+    font-weight: 700
+    font-size: 16px
+    text-transform: uppercase
+    margin-bottom: 8px
+    letter-spacing: 1px
+
+  &__stat-icon
+    width: 24px
+    height: 24px
+    margin-right: 8px
+
+  &__stat-value
+    color: $c-white
+    font-family: Montserrat
+    line-height: normal
+    font-weight: 500
+    font-size: 16px
+
+  &__stat-subtitle
+    color: $c-dusty-gray
+    font-family: Montserrat
+    line-height: normal
+    font-weight: 500
+    font-size: 18px
+    text-transform: uppercase
+    text-align: center
+    letter-spacing: 5px
 
 .paragraph
   color: $c-white
