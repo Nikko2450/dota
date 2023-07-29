@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Container } from "../../components/Container/Container";
 import { Attributes } from "./Components/Attributes/Attributes";
+import { Roles } from "./Components/Roles/Roles";
+import { Stats } from "./Components/Stats/Stats";
 
 const url = "http://192.168.0.100:8080/v1";
 
@@ -117,189 +119,53 @@ export const Hero = () => {
           <div className="hero__all-attributes-wrapper">
             <Attributes
               portrait={`${url}/static/images/${data.image}`}
-              amount={data.attributes.health.amount}
+              healthAmount={data.attributes.health.amount}
+              healthRegeneration={data.attributes.health.regeneration}
+              manaAmount={data.attributes.mana.amount}
+              manaRegeneration={data.attributes.mana.regeneration}
+              strength={`${url}/static/images/hero_strength.png`}
+              strengthAmount={data.attributes.strength.amount}
+              strengthLevel={data.attributes.strength.per_level}
+              agility={`${url}/static/images/hero_agility.png`}
+              agilityAmount={data.attributes.agility.amount}
+              agilityLevel={data.attributes.agility.per_level}
+              intelligence={`${url}/static/images/hero_intelligence.png`}
+              intelligenceAmount={data.attributes.intelligence.amount}
+              intelligenceLevel={data.attributes.intelligence.per_level}
             />
-            <div className="hero__details-roles">
-              <div className="hero__wrapper-roles">
-                <div className="hero__role">
-                  <p className="hero__role-name">Carry</p>
-                  <input
-                    className="hero__role-scroll"
-                    type="range"
-                    disabled
-                    value={data.roles.carry}
-                  />
-                </div>
-                <div className="hero__role">
-                  <p className="hero__role-name">Disabler</p>
-                  <input
-                    className="hero__role-scroll"
-                    type="range"
-                    disabled
-                    value={data.roles.disabler}
-                  />
-                </div>
-                <div className="hero__role">
-                  <p className="hero__role-name">Durable</p>
-                  <input
-                    className="hero__role-scroll"
-                    type="range"
-                    disabled
-                    value={data.roles.durable}
-                  />
-                </div>
-                <div className="hero__role">
-                  <p className="hero__role-name">Escape</p>
-                  <input
-                    className="hero__role-scroll"
-                    type="range"
-                    disabled
-                    value={data.roles.escape}
-                  />
-                </div>
-                <div className="hero__role">
-                  <p className="hero__role-name">Initiator</p>
-                  <input
-                    className="hero__role-scroll"
-                    type="range"
-                    disabled
-                    value={data.roles.initiator}
-                  />
-                </div>
-                <div className="hero__role">
-                  <p className="hero__role-name">Junglerr</p>
-                  <input
-                    className="hero__role-scroll"
-                    type="range"
-                    disabled
-                    value={data.roles.jungler}
-                  />
-                </div>
-                <div className="hero__role">
-                  <p className="hero__role-name">Nuker</p>
-                  <input
-                    className="hero__role-scroll"
-                    type="range"
-                    disabled
-                    value={data.roles.nuker}
-                  />
-                </div>
-                <div className="hero__role">
-                  <p className="hero__role-name">Pusher</p>
-                  <input
-                    className="hero__role-scroll"
-                    type="range"
-                    disabled
-                    value={data.roles.pusher}
-                  />
-                </div>
-                <div className="hero__role">
-                  <p className="hero__role-name">Support</p>
-                  <input
-                    className="hero__role-scroll"
-                    type="range"
-                    disabled
-                    value={data.roles.support}
-                  />
-                </div>
-              </div>
-              <p className="hero__role-subtitle">roles</p>
-            </div>
-            <div className="hero__details-stats">
-              <div className="hero__wrapper-stats">
-                <div className="hero__stat-attack">
-                  <h3 className="hero__stat-title">attack</h3>
-                  <div className="hero__stat-element">
-                    <img
-                      className="hero__stat-icon"
-                      src={`${url}/static/images/icon_damage.png`}
-                    />
-                    <p className="hero__stat-value">
-                      {data.stats.attack.damage.max}-
-                      {data.stats.attack.damage.min}
-                    </p>
-                  </div>
-                  <div className="hero__stat-element">
-                    <img
-                      className="hero__stat-icon"
-                      src={`${url}/static/images/icon_attack_time.png`}
-                    />
-                    <p className="hero__stat-value">{data.stats.attack.time}</p>
-                  </div>
-                  <div className="hero__stat-element">
-                    <img
-                      className="hero__stat-icon"
-                      src={`${url}/static/images/icon_attack_range.png`}
-                    />
-                    <p className="hero__stat-value">
-                      {data.stats.attack.range}
-                    </p>
-                  </div>
-                  <div className="hero__stat-element">
-                    <img
-                      className="hero__stat-icon"
-                      src={`${url}/static/images/icon_projectile_speed.png`}
-                    />
-                    <p className="hero__stat-value">
-                      {data.stats.attack.projectile_speed}
-                    </p>
-                  </div>
-                </div>
-                <div className="hero__stat-defense">
-                  <h3 className="hero__stat-title">defense</h3>
-                  <div className="hero__stat-element">
-                    <img
-                      className="hero__stat-icon"
-                      src={`${url}/static/images/icon_armor.png`}
-                    />
-                    <p className="hero__stat-value">
-                      {data.stats.defense.armor}
-                    </p>
-                  </div>
-                  <div className="hero__stat-element">
-                    <img
-                      className="hero__stat-icon"
-                      src={`${url}/static/images/icon_magic_resist.png`}
-                    />
-                    <p className="hero__stat-value">
-                      {data.stats.defense.magic_resist}
-                    </p>
-                  </div>
-                </div>
-                <div className="hero__stat-mobility">
-                  <h3 className="hero__stat-title">mobility</h3>
-                  <div className="hero__stat-element">
-                    <img
-                      className="hero__stat-icon"
-                      src={`${url}/static/images/icon_movement_speed.png`}
-                    />
-                    <p className="hero__stat-value">
-                      {data.stats.mobility.movement_speed}
-                    </p>
-                  </div>
-                  <div className="hero__stat-element">
-                    <img
-                      className="hero__stat-icon"
-                      src={`${url}/static/images/icon_turn_rate.png`}
-                    />
-                    <p className="hero__stat-value">
-                      {data.stats.mobility.turn_rate}
-                    </p>
-                  </div>
-                  <div className="hero__stat-element">
-                    <img
-                      className="hero__stat-icon"
-                      src={`${url}/static/images/icon_vision.png`}
-                    />
-                    <p className="hero__stat-value">
-                      {data.stats.mobility.vision.day} /{" "}
-                      {data.stats.mobility.vision.night}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <p className="hero__stat-subtitle">stats</p>
-            </div>
+            <Roles
+              carry={data.roles.carry}
+              disabler={data.roles.disabler}
+              durable={data.roles.durable}
+              escape={data.roles.escape}
+              initiator={data.roles.initiator}
+              jungler={data.roles.jungler}
+              nuker={data.roles.nuker}
+              pusher={data.roles.pusher}
+              support={data.roles.support}
+            />
+            <Stats
+              iconDamage={`${url}/static/images/icon_damage.png`}
+              damageMax={data.stats.attack.damage.max}
+              damageMin={data.stats.attack.damage.min}
+              iconAttackTime={`${url}/static/images/icon_attack_time.png`}
+              attackTime={data.stats.attack.time}
+              iconAttackRange={`${url}/static/images/icon_attack_range.png`}
+              attackRange={data.stats.attack.range}
+              iconProjectileSpeed={`${url}/static/images/icon_projectile_speed.png`}
+              projectileSpeed={data.stats.attack.projectile_speed}
+              iconArmor={`${url}/static/images/icon_armor.png`}
+              defenseArmor={data.stats.defense.armor}
+              iconMagicResist={`${url}/static/images/icon_magic_resist.png`}
+              magicResist={data.stats.defense.magic_resist}
+              iconMovementSpeed={`${url}/static/images/icon_movement_speed.png`}
+              movementSpeed={data.stats.mobility.movement_speed}
+              iconTurnRate={`${url}/static/images/icon_turn_rate.png`}
+              turnRate={data.stats.mobility.turn_rate}
+              iconVision={`${url}/static/images/icon_vision.png`}
+              visionDay={data.stats.mobility.vision.day}
+              visionNight={data.stats.mobility.vision.night}
+            />
           </div>
         </div>
       </div>

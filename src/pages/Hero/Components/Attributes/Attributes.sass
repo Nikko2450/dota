@@ -1,1 +1,109 @@
 .attribut
+  width: 30%
+
+  &__wrapper
+    display: flex
+    justify-content: space-around
+    align-items: center
+    margin-bottom: 15px
+
+  &__portrait
+    display: flex
+    flex-direction: column
+
+  &__hero-img
+    width: 150px
+    height: 84px
+  
+  &__health
+    position: relative
+    width: 150px
+    height: 22px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: linear-gradient(to right, $c-green-pea, $c-green-yellow)
+
+  &__health-amount
+    position: absolute
+    text-align: center
+    width: 100%
+    color: $c-white
+    text-shadow: 1px 1px 2px $c-black
+    font-family: Montserrat
+    font-weight: 700
+    line-height: normal
+
+  &__health-regeneration
+    font-family: Montserrat
+    font-size: 11px
+    text-align: right
+    width: 100%
+    padding-right: 15px
+    color: $c-green-pea
+
+  &__mana
+    position: relative
+    width: 150px
+    height: 22px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: linear-gradient(to right, $c-denim, $c-aquamarine)
+
+  &__mana-amount
+    position: absolute
+    text-align: center
+    width: 100%
+    color: $c-white
+    text-shadow: 1px 1px 2px $c-black
+    font-family: Montserrat
+    font-weight: 700
+    line-height: normal
+
+  &__mana-regeneration
+    font-family: Montserrat
+    font-size: 11px
+    text-align: right
+    width: 100%
+    padding-right: 15px
+    color: $c-green-pea
+
+  &__hero
+    display: flex
+    align-items: center
+
+    &:not(:last-of-type)
+      margin-bottom: 8px
+
+  &__icon
+    width: 30px
+    height: 30px
+  
+  &__hero-amount
+    color: $c-white
+    font-family: Montserrat
+    line-height: normal
+    font-weight: 700
+    font-size: 20px
+    margin-left: 12px
+    letter-spacing: 1px
+
+  &__hero-per-level
+    color: $c-dusty-gray
+    font-family: Montserrat
+    line-height: normal
+    font-weight: 500
+    font-size: 15px
+    margin-left: 8px
+
+  &__subtitle
+    color: $c-dusty-gray
+    font-family: Montserrat
+    line-height: normal
+    font-weight: 500
+    font-size: 18px
+    text-transform: uppercase
+    text-align: center
+    letter-spacing: 5px
+
